@@ -14,23 +14,17 @@ class MainActivity : AppCompatActivity() {
         val Btnrose = findViewById<Button>(R.id.Btnrose)
         val Btncactus = findViewById<Button>(R.id.Btncactus)
 
-        val rose=Rose()
-        val cactus=Cactus()
-        val oak = Oak()
 
         Btnrose.setOnClickListener {
-            rose.makeAction()
-
-
-
-            Toast.makeText(applicationContext, "Роза растет", Toast.LENGTH_LONG ).show()
+            val rose = Rose()
+            rose.Plantgrow(applicationContext)
 
         }
 
         Btncactus.setOnClickListener {
-            cactus.makeAction()
 
-            Toast.makeText(applicationContext, "Кактус растет ", Toast.LENGTH_LONG ).show()
+            val cactus = Cactus()
+            cactus.Plantgrow(applicationContext)
 
         }
 
@@ -38,9 +32,10 @@ class MainActivity : AppCompatActivity() {
 
         BtnOAK.setOnClickListener{
 
-            oak.makeAction()
+            val oak = Oak()
+            oak.Plantgrow(applicationContext)
 
-            Toast.makeText(applicationContext, "Дуб растет", Toast.LENGTH_LONG ).show()
+
 
         }
     }

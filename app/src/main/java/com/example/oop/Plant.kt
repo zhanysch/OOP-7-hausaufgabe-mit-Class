@@ -1,18 +1,16 @@
 package com.example.oop
 
-abstract class Plant {
+import android.content.Context
+import android.widget.Toast
 
-    var leaf = 6
-    var branch = 3
+open class Plant {
 
+    protected fun Plantgrow (typeofPlant: String,context: Context ): String {
 
-
-   abstract fun makeAction()
-
-    fun Plant(){
-        println("Growe")}
+       val result:String = "растение растет" + typeofPlant
 
 
+      return result }
 
 
 
